@@ -1,0 +1,250 @@
+header{
+
+    background-color:rgb(8, 72, 107);
+    color: white;
+    width: 100%;
+    font-weight: bold;
+
+}
+
+.h-section{
+
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    font-size: 25px;
+    
+}
+
+nav{
+
+    background-color:rgb(13, 60, 114);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+ul{
+
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+li{
+
+    list-style-type: none;
+
+}
+
+li a{
+
+    color: white;
+    display: block;
+    height: 15px;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 20px;
+
+}
+
+li a:hover{color: orange;}
+
+.b-section{
+
+    width: 95%;
+    margin-left: 15px;
+}
+
+.b1-section{
+
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.b2-section{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: grey 1px solid;
+    margin-bottom: 15px;
+
+}
+
+.a1-article{
+
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 20px;
+
+}
+
+.a1-article img{
+
+    height: 260px;
+}
+
+.p1-article{
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.p2-article {
+
+    margin-top: 15px;
+}
+
+.a-clanak:hover {color: rgb(255, 79, 44);}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.a2-article{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.a2-article p{
+
+    width: 50%;
+    margin-left: 28%;
+}
+
+.a2-article img{
+
+    height: 400px;
+    width: 60%;
+    margin-left: 22%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.a3-article{
+
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.a3-article p{
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.a3-article label{
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.f1 {
+    
+    margin-top: 220px;
+    margin-bottom: 220px;
+}
+
+.f1 select {
+
+    width: 50%;
+}
+
+.i1-input{
+
+    width: 50%;
+}
+
+span {
+
+    display: none;
+}
+
+textarea{
+
+    width: 50%;
+    height: 200px;
+}
+
+select{
+
+    width: 25%;
+}
+
+.img {
+
+    width: 30%;
+}
+
+.bold {
+
+    font-weight: bold;
+}
+
+.link {
+
+    color: rgb(255, 79, 44);
+    text-decoration-line: underline;
+}
+
+.clanak {
+
+    font-size: large;
+    line-height: 125%;
+}
+
+.margin-1 {
+
+    margin-top: 55px;
+}
+
+.margin-2 {
+
+    margin-bottom: 175px;
+}
+
+.margin-3 {
+
+    margin-top: 225px;
+    margin-bottom: 225px;
+}
+
+footer{
+
+    background-color:rgb(8, 72, 107);
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+}
+
+@media (max-width: 1395px){
+
+    .a-index, .a-food, .a-administracija, .a-unos{
+
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+    }
+
+}

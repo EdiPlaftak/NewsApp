@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Welt</title>
+
+        <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <section class = "h-section">
+
+                <p>WELT</p>
+
+            </section>
+
+            <nav>
+
+                <ul>
+                    <li><a class = "a-index" href = "index.php">HOME</a></li>
+                    <li><a href = "kategorija.php?kategorija=beruf">BERUF & KARRIERE</a></li>
+                    <li><a class = "a-food" href = "kategorija.php?kategorija=food">FOOD</a></li>
+                    <li><a class = "a-administracija" href = "administracija.php">ADMINISTRACIJA</a></li>
+                    <li><a class = "a-unos" href = "unos.html">UNOS</a></li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <section class = "b-section">
+
+            <article class = "a3-article">
+
+                <form enctype = "multipart/form-data" action = "skripta.php" method = "post">
+
+                    <p>Naslov vijesti:</p>
+                    <input class = "i1-input" type = "text" name = "naslov" id = "naslov">
+                    <br><br>
+                    <span id = "porukaNaslov">Naslov vijesti mora imati od 5 do 30 znakova!</span>
+    
+                    <p>Sazetak vijesti:</p>
+                    <textarea name = "sazetak" id = "sazetak"></textarea>
+                    <br><br>
+                    <span id = "porukaSazetak">Sazetak vijesti mora imati od 10 do 100 znakova!</span>
+    
+                    <p>Tekst vijesti:</p>
+                    <textarea name = "tekst" id = "tekst"></textarea>
+                    <br><br>
+                    <span id = "porukaTekst">Tekst vijesti ne smije biti prazan!</span>
+    
+                    <p>Kategorija vijesti:</p>
+                    <select name = "kategorija" id = "kategorija">
+    
+                        <option value = "" disabled selected>Odaberite kategoriju:</option>
+                        <option value = "beruf">BERUF & KARRIERE</option>
+                        <option value = "food">FOOD</option>
+    
+                    </select>
+                    <br><br>
+                    <span id = "porukaKategorija">Kategorija vijesti mora biti odabrana!</span>
+    
+                    <p>Slika vijesti:</p>
+                    <input type = "file" accept = "image/jpg, image/png, image/jpeg" name = "slika" id = "slika">
+                    <br><br>
+                    <span id = "porukaSlika">Slika vijesti mora biti odabrana!</span>
+    
+                    <br><br>
+                    <label>Arhiva vijesti:</label>
+                    <input type = "checkbox" name = "arhiva">
+    
+                    <br><br>
+                    <input type = "submit" name = "posalji" value = "Posalji" id = "gumb"/>
+    
+                </form>
+
+            </article>
+
+            
+            <script type = "text/javascript">
+
+                document.getElementById("gumb").onclick = function(event){
+
+                    var slanje_forme = true;
+
+                    document.getElementById("naslov").style.border = "";
+                    document.getElementById("sazetak").style.border = "";
+                    document.getElementById("tekst").style.border = "";
+                    document.getElementById("kategorija").style.border = "";
+                    document.getElementById("slika").style.border = "";
+
+                    document.getElementById("porukaNaslov").style.display = "none";
+                    document.getElementById("porukaSazetak").style.display = "none";
+                    document.getElementById("porukaTekst").style.display = "none";
+                    document.getElementById("porukaKategorija").style.display = "none";
+                    document.getElementById("porukaSlika").style.display = "none";
+
+                    var naslov = document.getElementById("naslov").value;
+
+                    if(naslov.length < 5 || naslov.length > 30){
+
+                        slanje_forme = false;
+
+                        document.getElementById("naslov").style.border = "1px dashed red";
+
+                        document.getElementById("porukaNaslov").style.display = "inline";
+
+                    }
+
+                    var sazetak = document.getElementById("sazetak").value;
+
+                    if(sazetak.length < 10 || sazetak.length > 100){
+
+                        slanje_forme = false;
+
+                        document.getElementById("sazetak").style.border = "1px dashed red";
+
+                        document.getElementById("porukaSazetak").style.display = "inline";
+
+                    }
+
+                    var tekst = document.getElementById("tekst").value;
+
+                    if(tekst.length < 1){
+
+                        slanje_forme = false;
+
+                        document.getElementById("tekst").style.border = "1px dashed red";
+
+                        document.getElementById("porukaTekst").style.display = "inline";
+
+                    }
+
+                    if(document.getElementById("kategorija").selectedIndex == 0){
+
+                        slanje_forme = false;
+
+                        document.getElementById("kategorija").style.border = "1px dashed red";
+
+                        document.getElementById("porukaKategorija").style.display = "inline";
+
+                    }
+
+                    var slika = document.getElementById("slika").value;
+
+                    if(slika.length < 1){
+
+                        slanje_forme = false;
+
+                        document.getElementById("slika").style.border = "1px dashed red";
+
+                        document.getElementById("porukaSlika").style.display = "inline";
+
+                    }
+                    
+
+
+                    if(slanje_forme != true){
+
+                        event.preventDefault();
+
+                    }
+
+                }
+
+            </script>
+
+
+        </section>
+
+        <footer>
+
+            <p>WELT</p>
+
+        </footer>
+
+
+    </body>
+
+</html>
